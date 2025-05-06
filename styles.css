@@ -227,14 +227,7 @@
         z-index: 10;
       }
 
-      .horarios-card {
-        max-width: 800px;
-        margin: -80px auto 0;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-      }
+     
 
       .horarios-title {
         font-size: 28px;

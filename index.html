@@ -147,6 +147,7 @@
     <meta name="msapplication-TileColor" content="#2b6cb0" />
     <meta name="theme-color" content="#ffffff" />
   </head>
+
   <body>
     <!-- Navbar -->
     <!-- Navbar con diseño ORIGINAL + mejoras SEO -->
@@ -308,38 +309,92 @@
       }
     </style>
 
-    <!-- Tarjeta de Horarios -->
-    <div class="horarios-wrapper">
+    <!-- Tarjeta de Horarios Optimizada SEO -->
+    <div
+      class="horarios-wrapper"
+      itemscope
+      itemtype="https://schema.org/MedicalClinic"
+    >
       <div class="container">
         <div class="horarios-card">
           <div class="horarios-header">
-            <h2 class="horarios-title">Horarios de atención</h2>
-            <p class="horarios-subtitle">
+            <h2 class="horarios-title" itemprop="name">
+              Horarios de atención en Hello Odontología
+            </h2>
+            <p class="horarios-subtitle" itemprop="description">
               Dedica tiempo a tu bienestar, elige el horario perfecto para tu
               visita
             </p>
           </div>
 
-          <div class="status">
-            <span class="status-dot"></span>
-            <span class="status-text">¡Abiertos ahora!</span>
+          <div
+            class="status"
+            itemprop="openingHoursSpecification"
+            itemscope
+            itemtype="https://schema.org/OpeningHoursSpecification"
+          >
+            <span
+              class="status-dot"
+              itemprop="hoursAvailable"
+              content="Mo-Fr 08:00-19:00"
+            ></span>
+            <span class="status-text" itemprop="description"
+              >¡Abiertos ahora!</span
+            >
           </div>
 
           <div class="horarios-list">
-            <div class="horario-item">
-              <span class="day">Lunes - Viernes</span>
+            <!-- Lunes a Viernes -->
+            <div
+              class="horario-item"
+              itemprop="openingHoursSpecification"
+              itemscope
+              itemtype="https://schema.org/OpeningHoursSpecification"
+            >
+              <span
+                class="day"
+                itemprop="dayOfWeek"
+                content="Monday, Tuesday, Wednesday, Thursday, Friday"
+                >Lunes - Viernes</span
+              >
               <span class="separator">:</span>
-              <span class="time">08:00am a 07:00pm</span>
+              <span
+                class="time"
+                itemprop="opens"
+                content="08:00"
+                itemprop="closes"
+                content="19:00"
+                >08:00am a 07:00pm</span
+              >
             </div>
-            <div class="horario-item">
-              <span class="day">Sábado</span>
+
+            <!-- Sábado -->
+            <div
+              class="horario-item"
+              itemprop="openingHoursSpecification"
+              itemscope
+              itemtype="https://schema.org/OpeningHoursSpecification"
+            >
+              <span class="day" itemprop="dayOfWeek" content="Saturday"
+                >Sábado</span
+              >
               <span class="separator">:</span>
-              <span class="time">08:00pm a 04:00pm</span>
+              <span
+                class="time"
+                itemprop="opens"
+                content="08:00"
+                itemprop="closes"
+                content="16:00"
+                >08:00am a 04:00pm</span
+              >
             </div>
+
+            <!-- Domingo -->
             <div class="horario-item">
               <span class="day">Domingo</span>
               <span class="separator">:</span>
               <span class="time closed">Cerrado</span>
+              <meta itemprop="openingHours" content="Su off" />
             </div>
           </div>
         </div>
@@ -432,6 +487,16 @@
       .closed {
         color: #f44336;
         font-weight: 500;
+      }
+
+      .horarios-card {
+        max-width: 800px;
+        margin: -80px auto 0;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        position: relative;
       }
     </style>
 
