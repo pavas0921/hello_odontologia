@@ -614,3 +614,21 @@
         0% { box-shadow: 0 0 0 0 rgba(43, 108, 176, 0.3); }
         100% { box-shadow: 0 0 0 15px rgba(43, 108, 176, 0); }
       }
+
+      .feature-item h3 {
+        text-transform: none; /* Conserva capitalización natural */
+        font-weight: 700; /* Negrita como en tu diseño */
+      }
+     
+      
+      /* Texto para SEO (no visible) */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
