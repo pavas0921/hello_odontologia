@@ -111,6 +111,20 @@
         ]
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DentalClinic",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+573215884090",
+          "contactType": "Atención al paciente",
+          "email": "helloodontologia@gmail.com",
+          "areaServed": "Medellín, Antioquia",
+          "availableLanguage": "Spanish"
+        }
+      }
+    </script>
 
     <script type="application/ld+json">
       {
@@ -845,6 +859,7 @@
         </p>
 
         <div class="contacto-info">
+          <!-- Tarjeta de Dirección con Mapa -->
           <div class="contacto-card">
             <div class="contacto-icon">
               <i class="fas fa-map-marker-alt"></i>
@@ -852,46 +867,128 @@
             <h3>Dirección</h3>
             <p>Avenida 80 # 50-70</p>
             <p>Glorieta Colombia con la 80</p>
+            <div class="mapa-container" style="margin-top: 15px">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2641399!2d-75.581215!3d6.2641399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTUnNTIuOSJOIDc1wrAzNCc1Ni4zIlc!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco"
+                width="100%"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                aria-label="Ubicación de Hello Odontología en Medellín"
+              >
+              </iframe>
+            </div>
           </div>
 
+          <!-- Tarjeta de Teléfono Optimizada -->
           <div class="contacto-card">
             <div class="contacto-icon">
               <i class="fas fa-phone"></i>
             </div>
             <h3>Teléfono</h3>
-            <p>3215884090</p>
+            <p>
+              <a
+                href="tel:+573215884090"
+                style="color: inherit; text-decoration: none"
+                >3215884090</a
+              >
+            </p>
+
+            <!-- Botones de acción -->
+            <div style="margin-top: 15px">
+              <a
+                href="https://wa.me/573215884090"
+                class="btn"
+                style="
+                  display: block;
+                  text-align: center;
+                  background-color: #25d366;
+                  color: white;
+                "
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
           </div>
 
+          <!-- Tarjeta de Email Optimizada -->
           <div class="contacto-card">
             <div class="contacto-icon">
               <i class="fas fa-envelope"></i>
             </div>
             <h3>Email</h3>
-            <p>helloodontologia@gmail.com</p>
+            <p>
+              <a
+                href="mailto:helloodontologia@gmail.com"
+                style="color: inherit; text-decoration: none"
+              >
+                helloodontologia@gmail.com
+              </a>
+            </p>
+            <div style="margin-top: 15px">
+              <a
+                href="tel:+573215884090"
+                class="btn"
+                style="display: block; margin-bottom: 8px; text-align: center"
+              >
+                <i class="fas fa-phone"></i> Llamar ahora
+              </a>
+            </div>
           </div>
         </div>
 
+        <!-- Formulario Optimizado -->
         <div class="contacto-form">
-          <form class="form-grid">
+          <form class="form-grid" name="contacto" netlify>
+            <!-- Campo Honeypot anti-spam (oculto) -->
+            <input type="text" name="_gotcha" style="display: none" />
+
             <div class="form-group">
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" id="nombre" class="form-input" required />
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-input"
+                required
+              />
             </div>
 
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" class="form-input" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+              />
             </div>
 
             <div class="form-group full">
               <label for="asunto" class="form-label">Asunto</label>
-              <input type="text" id="asunto" class="form-input" required />
+              <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                class="form-input"
+                required
+              />
             </div>
 
             <div class="form-group full">
               <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea id="mensaje" class="form-textarea" required></textarea>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="form-textarea"
+                required
+              ></textarea>
             </div>
+
+            <!-- Campo oculto para tracking -->
+            <input type="hidden" name="utm_source" id="utm_source" />
 
             <div class="form-submit">
               <button type="submit" class="btn">Enviar Mensaje</button>
@@ -901,18 +998,22 @@
       </div>
 
       <script>
+        // Rellenar campo UTM si existe en la URL
+        document.getElementById("utm_source").value =
+          new URLSearchParams(window.location.search).get("utm_source") ||
+          "organic";
+
+        // Envío a WhatsApp (conservando tu lógica original)
         document
           .querySelector(".contacto-form form")
           .addEventListener("submit", function (e) {
-            e.preventDefault(); // Evita el envío normal del formulario
+            e.preventDefault();
 
-            // Captura los valores del formulario
             const nombre = document.getElementById("nombre").value;
             const email = document.getElementById("email").value;
             const asunto = document.getElementById("asunto").value;
             const mensaje = document.getElementById("mensaje").value;
 
-            // Formatea el mensaje para WhatsApp
             const textoWhatsApp =
               `*Nuevo mensaje - Hello Odontología*%0A%0A` +
               `%E2%9D%94%EF%B8%8F *Nombre completo:*%0A${encodeURIComponent(
@@ -923,16 +1024,10 @@
               `%F0%9F%93%9D *Mensaje:*%0A${encodeURIComponent(mensaje)}%0A%0A` +
               `_Enviado desde el formulario de contacto_`;
 
-            // Número de teléfono (el mismo que usaste antes)
-            const telefono = "573215884090";
-
-            // Redirecciona a WhatsApp
             window.open(
-              `https://wa.me/${telefono}?text=${textoWhatsApp}`,
+              `https://wa.me/573215884090?text=${textoWhatsApp}`,
               "_blank"
             );
-
-            // Opcional: Resetear el formulario después del envío
             this.reset();
           });
       </script>
