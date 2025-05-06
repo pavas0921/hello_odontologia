@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- ETIQUETA CANONICAL (UBICACIÓN IDEAL) -->
+
     <link rel="canonical" href="https://helloodontologia.netlify.app/" />
 
     <link
@@ -39,7 +39,7 @@
     />
     <meta
       property="og:image"
-      content="https://helloodontologia.com/assets/img/social-preview.jpg"
+      content="https://https://helloodontologia.netlify.app/assets/img/social-preview.jpg"
     />
 
     <!-- Twitter -->
@@ -58,7 +58,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://helloodontologia.com/assets/img/social-preview.jpg"
+      content="https://https://helloodontologia.netlify.app/assets/img/social-preview.jpg"
     />
 
     <!-- Schema Markup Mejorado -->
@@ -67,8 +67,8 @@
         "@context": "https://schema.org",
         "@type": "DentalClinic",
         "name": "Hello Odontología",
-        "url": "https://helloodontologia.com",
-        "logo": "https://helloodontologia.com/assets/img/logo.webp",
+        "url": "https://https://helloodontologia.netlify.app",
+        "logo": "https://https://helloodontologia.netlify.app/assets/img/logo.webp",
         "description": "Clínica dental especializada en implantes y diseño de sonrisa en Medellín",
         "address": {
           "@type": "PostalAddress",
@@ -106,8 +106,8 @@
         ],
         "priceRange": "$$",
         "image": [
-          "https://helloodontologia.com/assets/img/clinica-1.webp",
-          "https://helloodontologia.com/assets/img/clinica-2.webp"
+          "https://https://helloodontologia.netlify.app/assets/img/clinica-1.webp",
+          "https://https://helloodontologia.netlify.app/assets/img/clinica-2.webp"
         ]
       }
     </script>
@@ -115,17 +115,18 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MedicalProcedure",
-        "name": "Diseño Digital de Sonrisa",
+        "@type": "DentalClinic",
+        "name": "Diseño de Sonrisa",
         "description": "Tecnología 3D para diseñar sonrisas perfectas en Medellín",
         "provider": {
           "@type": "DentalClinic",
           "name": "Hello Odontología"
         },
-        "medicalSpecialty": {
-          "@type": "MedicalSpecialty",
-          "name": "Cosmetic Dentistry"
-        }
+        "medicalSpecialty": [
+          { "@type": "MedicalSpecialty", "name": "Orthodontics" },
+          { "@type": "MedicalSpecialty", "name": "Prosthodontics" },
+          { "@type": "MedicalSpecialty", "name": "CosmeticDentistry" }
+        ]
       }
     </script>
 
@@ -135,7 +136,7 @@
     <link rel="dns-prefetch" href="https://maps.googleapis.com" />
 
     <!-- Recursos críticos -->
-    <link rel="preload" href="styles.css" as="style" />
+    <link rel="preload" href="./styles.css" as="style" />
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
