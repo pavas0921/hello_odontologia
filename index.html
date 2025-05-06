@@ -136,10 +136,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Favicon (generado en realfavicongenerator.net) -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
@@ -153,28 +149,54 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="navbar">
+    <!-- Navbar con diseño ORIGINAL + mejoras SEO -->
+    <header class="navbar" itemscope itemtype="https://schema.org/DentalClinic">
       <div class="container navbar-container">
-        <a href="#" class="logo">
+        <a href="/" class="logo" itemprop="url">
+          <!-- Logo circular como en tu versión original -->
           <img
-            src="./assets/hello_odontologia.png"
-            alt="Hello Odontologos Logo"
+            src="./assets/hello_odontologia.webp"
+            alt="Hello Odontología - Especialistas en implantes dentales y diseño de sonrisa en Medellín"
+            class="logo-img"
+            width="40"
+            height="40"
+            loading="eager"
+            itemprop="logo"
           />
-          <span class="logo-text">Hello odontología</span>
+          <span class="logo-text" itemprop="name">Hello Odontología</span>
         </a>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="#inicio" class="nav-link">Inicio</a></li>
-            <li><a href="#servicios" class="nav-link">Servicios</a></li>
-            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+
+        <nav aria-label="Menú principal">
+          <!-- Añadido aria-label -->
+          <ul
+            class="nav-menu"
+            itemscope
+            itemtype="https://schema.org/SiteNavigationElement"
+          >
+            <li itemprop="name">
+              <a
+                href="#inicio"
+                class="nav-link"
+                aria-current="page"
+                itemprop="url"
+                >Inicio</a
+              >
+            </li>
+            <li itemprop="name">
+              <a href="#servicios" class="nav-link" itemprop="url">Servicios</a>
+            </li>
+            <li itemprop="name">
+              <a href="#nosotros" class="nav-link" itemprop="url">Nosotros</a>
+            </li>
+            <li itemprop="name">
+              <a href="#contacto" class="nav-link" itemprop="url">Contacto</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- Banner Principal Optimizado para SEO -->
-    <!-- Banner ajustado para altura completa -->
     <section
       id="inicio"
       class="banner"
