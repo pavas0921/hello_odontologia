@@ -112,6 +112,23 @@
       }
     </script>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Diseño Digital de Sonrisa",
+        "description": "Tecnología 3D para diseñar sonrisas perfectas en Medellín",
+        "provider": {
+          "@type": "DentalClinic",
+          "name": "Hello Odontología"
+        },
+        "medicalSpecialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Cosmetic Dentistry"
+        }
+      }
+    </script>
+
     <!-- Preconexiones y precargas -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
@@ -500,85 +517,196 @@
       }
     </style>
 
-    <!-- Servicios -->
-    <section id="servicios" class="servicios">
+    <!-- Sección Servicios Completa (5 servicios) -->
+    <section
+      id="servicios"
+      class="servicios"
+      itemscope
+      itemtype="https://schema.org/MedicalClinic"
+    >
       <div class="container text-center">
-        <h2 class="section-title">Lo que Ofrecemos a Nuestros Pacientes</h2>
-        <p class="section-subtitle">
-          Ilumina el mundo con tu mejor sonrisa, Nosotros nos encargamos del
-          resto.
+        <h2 class="section-title" itemprop="medicalSpecialty">
+          Lo que Ofrecemos a Nuestros Pacientes
+        </h2>
+        <p class="section-subtitle" itemprop="description">
+          Ilumina el mundo con tu mejor sonrisa. Especialistas en
+          <strong>odontología general</strong>,
+          <strong>implantes dentales</strong> y <strong>ortodoncia</strong> en
+          Medellín.
         </p>
 
         <div class="servicios-grid">
-          <div class="servicio-item">
-            <div class="servicio-icon">
+          <!-- Servicio Destacado - Diseño de Sonrisa -->
+          <div
+            class="servicio-item servicio-destacado"
+            itemprop="hasOfferCatalog"
+            itemscope
+            itemtype="https://schema.org/OfferCatalog"
+          >
+            <div class="servicio-icon" aria-hidden="true">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <!-- Icono especial -->
+            </div>
+            <h3 class="servicio-title" itemprop="name">
+              <span itemprop="medicalSpecialty">Diseño de Sonrisa</span>
+              <span class="sr-only">en Medellín</span>
+            </h3>
+            <div
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <p class="servicio-desc" itemprop="description">
+                <strong>Transforma tu sonrisa</strong>
+                <strong>Carillas personalizadas</strong>,
+                <strong>corrección de forma y color</strong>, y
+                <strong>armonización facial</strong> en Medellín.
+                <meta itemprop="priceRange" content="$$$$" />
+              </p>
+              <!-- Microdatos ocultos para SEO -->
+              <div itemprop="serviceType" content="CosmeticDentistry">
+                Diseño de Sonrisa
+              </div>
+              <meta itemprop="provider" content="Hello Odontología" />
+            </div>
+          </div>
+
+          <!-- Servicio 1 - Odontología General -->
+          <div
+            class="servicio-item"
+            itemprop="hasOfferCatalog"
+            itemscope
+            itemtype="https://schema.org/OfferCatalog"
+          >
+            <div class="servicio-icon" aria-hidden="true">
               <i class="fas fa-tooth"></i>
             </div>
-            <h3 class="servicio-title">Odontología General y Estética</h3>
-            <p class="servicio-desc">
-              Cuidamos tu sonrisa desde la salud hasta la estética. Realizamos
-              limpiezas dentales, resinas, blanqueamientos y más, enfocándonos
-              en mantener una boca sana y una sonrisa radiante. Nuestro objetivo
-              es que te sientas bien por dentro y se note por fuera.
-            </p>
+            <h3 class="servicio-title" itemprop="name">
+              Odontología General y Estética
+              <span class="sr-only">en Medellín</span>
+            </h3>
+            <div
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <p class="servicio-desc" itemprop="description">
+                <strong>Limpiezas dentales</strong>, <strong>resinas</strong> y
+                <strong>blanqueamientos</strong> profesionales. Tratamientos
+                para mantener una boca sana y sonrisa radiante en nuestra
+                clínica dental de Medellín.
+                <meta itemprop="priceRange" content="$$" />
+              </p>
+            </div>
           </div>
 
-          <div class="servicio-item">
-            <div class="servicio-icon">
+          <!-- Servicio 2 - Ortodoncia -->
+          <div
+            class="servicio-item"
+            itemprop="hasOfferCatalog"
+            itemscope
+            itemtype="https://schema.org/OfferCatalog"
+          >
+            <div class="servicio-icon" aria-hidden="true">
               <i class="fas fa-user-md"></i>
             </div>
-            <h3 class="servicio-title">Ortodoncia y Armonización Orofacial</h3>
-            <p class="servicio-desc">
-              Corrige la posición de tus dientes y mejora la armonía de tu
-              rostro. Ofrecemos tratamientos de ortodoncia con brackets
-              tradicionales o estéticos, y complementamos con técnicas de
-              armonización facial como la aplicación de ácido hialurónico y
-              toxina botulínica para lograr un equilibrio perfecto entre
-              funcionalidad y belleza.
-            </p>
+            <h3 class="servicio-title" itemprop="name">
+              Ortodoncia y Armonización Facial
+              <span class="sr-only">en Medellín</span>
+            </h3>
+            <div
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <p class="servicio-desc" itemprop="description">
+                <strong>Brackets estéticos</strong> y
+                <strong>tratamientos faciales</strong> con ácido hialurónico.
+                Especialistas certificados en ortodoncia en Medellín.
+                <meta itemprop="priceRange" content="$$$" />
+              </p>
+            </div>
           </div>
 
-          <div class="servicio-item">
-            <div class="servicio-icon">
+          <!-- Servicio 3 - Implantes -->
+          <div
+            class="servicio-item"
+            itemprop="hasOfferCatalog"
+            itemscope
+            itemtype="https://schema.org/OfferCatalog"
+          >
+            <div class="servicio-icon" aria-hidden="true">
               <i class="fas fa-syringe"></i>
             </div>
-            <h3 class="servicio-title">Implantes y Prótesis Dentales</h3>
-            <p class="servicio-desc">
-              Recupera la funcionalidad y estética de tu sonrisa con soluciones
-              duraderas. Colocamos implantes dentales de alta calidad y
-              diseñamos prótesis personalizadas que se adaptan perfectamente a
-              tu boca, devolviéndote la confianza al hablar, comer y sonreír.
-            </p>
-          </div>
-
-          <div class="servicio-item">
-            <div class="servicio-icon">
-              <i class="fas fa-crown"></i>
-            </div>
-            <h3 class="servicio-title">
-              Endodoncia, Periodoncia y Cirugía Maxilofacial
+            <h3 class="servicio-title" itemprop="name">
+              Implantes Dentales <span class="sr-only">en Medellín</span>
             </h3>
-            <p class="servicio-desc">
-              Tratamientos especializados para conservar tus dientes y mantener
-              tus encías sanas. Realizamos endodoncias (tratamiento de
-              conductos), tratamientos periodontales para combatir la enfermedad
-              de las encías y cirugías orales como extracciones complejas o
-              terceros molares. Todo con tecnología de punta y un enfoque
-              humano.
-            </p>
+            <div
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <p class="servicio-desc" itemprop="description">
+                <strong>Implantes de titanio</strong> y
+                <strong>prótesis fijas</strong>. Recupera la funcionalidad de tu
+                sonrisa con garantía de por vida en nuestra clínica de Medellín.
+                <meta itemprop="priceRange" content="$$$$" />
+              </p>
+            </div>
           </div>
 
-          <div class="servicio-item">
-            <div class="servicio-icon">
+          <!-- Servicio 4 - Endodoncia -->
+          <div
+            class="servicio-item"
+            itemprop="hasOfferCatalog"
+            itemscope
+            itemtype="https://schema.org/OfferCatalog"
+          >
+            <div class="servicio-icon" aria-hidden="true">
               <i class="fas fa-crown"></i>
             </div>
-            <h3 class="servicio-title">Odontopediatría</h3>
-            <p class="servicio-desc">
-              Cuidamos la salud bucal de los más pequeños desde sus primeros
-              dientes. Nuestro enfoque es preventivo, didáctico y amigable para
-              que cada visita al dentista sea una experiencia positiva.
-              Enseñamos hábitos saludables, realizam
-            </p>
+            <h3 class="servicio-title" itemprop="name">
+              Endodoncia y Cirugía <span class="sr-only">en Medellín</span>
+            </h3>
+            <div
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <p class="servicio-desc" itemprop="description">
+                <strong>Tratamiento de conductos</strong> y
+                <strong>extracciones complejas</strong>. Tecnología digital para
+                diagnósticos precisos en Medellín.
+                <meta itemprop="priceRange" content="$$$" />
+              </p>
+            </div>
+          </div>
+
+          <!-- Servicio 5 - Odontopediatría -->
+          <div
+            class="servicio-item"
+            itemprop="hasOfferCatalog"
+            itemscope
+            itemtype="https://schema.org/OfferCatalog"
+          >
+            <div class="servicio-icon" aria-hidden="true">
+              <i class="fas fa-baby"></i>
+            </div>
+            <h3 class="servicio-title" itemprop="name">
+              Odontopediatría <span class="sr-only">en Medellín</span>
+            </h3>
+            <div
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <p class="servicio-desc" itemprop="description">
+                <strong>Primera consulta gratuita</strong> para niños.
+                Tratamientos preventivos, <strong>sellantes dentales</strong> y
+                fluorizaciones en ambiente amigable en Medellín.
+                <meta itemprop="priceRange" content="$$" />
+              </p>
+            </div>
           </div>
         </div>
       </div>
