@@ -173,56 +173,118 @@
       </div>
     </header>
 
-    <!-- Banner Principal -->
-    <section id="inicio" class="banner">
-      <img
-        src="https://static.wixstatic.com/media/5c51e8_86cdf9bdda8b472d83372552bc24d3d2.jpg/v1/fill/w_1225,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5c51e8_86cdf9bdda8b472d83372552bc24d3d2.jpg"
-        alt="Dental clinic"
-        class="banner-img"
-      />
-      <div class="container banner-content">
-        <h1 class="banner-title">Bienvenidos a Hello Odontología</h1>
-        <a
-          href="https://wa.me/573215884090?text=Hola,%20vengo%20desde%20la%20página%20web%20y%20me%20gustaría%20agendar%20una%20cita%20odontológica"
-          class="btn whatsapp-btn"
-          target="_blank"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            alt="WhatsApp"
-            class="whatsapp-icon"
+    <!-- Banner Principal Optimizado para SEO -->
+    <!-- Banner ajustado para altura completa -->
+    <section
+      id="inicio"
+      class="banner"
+      aria-label="Clínica Dental Hello Odontología en Medellín"
+    >
+      <div class="banner-container">
+        <picture>
+          <source
+            media="(max-width: 480px)"
+            srcset="img/banner-clinica-480.webp"
           />
-          Separa tu cita
-        </a>
+          <source
+            media="(max-width: 1024px)"
+            srcset="img/banner-clinica-800.webp"
+          />
+          <img
+            src="img/banner-clinica.webp"
+            alt="Clínica dental Hello Odontología en Medellín"
+            class="banner-img"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+
+        <div class="banner-content">
+          <h1 class="banner-title">
+            Hello Odontología | Especialistas en Implantes Dentales y Diseño de
+            Sonrisa en Medellín
+          </h1>
+          <a
+            href="https://wa.me/573215884090?text=Hola,%20quisiera%20agendar%20una%20cita%20en%20Hello%20Odontología%20Medellín"
+            class="btn whatsapp-btn"
+          >
+            <img
+              src="img/whatsapp-icon.webp"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+            Separa tu cita
+          </a>
+        </div>
       </div>
-
-      <style>
-        .whatsapp-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          padding: 12px 24px;
-          background-color: #25d366;
-          color: white;
-          text-decoration: none;
-          border-radius: 50px;
-          font-weight: 600;
-          transition: all 0.3s ease;
-        }
-
-        .whatsapp-btn:hover {
-          background-color: #128c7e;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .whatsapp-icon {
-          width: 20px;
-          height: 20px;
-        }
-      </style>
     </section>
+
+    <style>
+      /* CSS optimizado para altura completa */
+      .banner {
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh; /* Altura mínima de pantalla completa */
+        max-height: 800px; /* Máximo para no exagerar en desktop */
+      }
+
+      .banner-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cubre todo el espacio manteniendo proporción */
+        object-position: center; /* Enfoca el centro de la imagen */
+        display: block;
+      }
+
+      .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+        max-width: 1200px;
+        z-index: 2;
+      }
+
+      .banner-title {
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        margin-bottom: 1.5rem;
+      }
+
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #25d366;
+        color: #fff !important;
+        border-radius: 10rem;
+        font-weight: 600;
+        transition: transform 0.2s;
+      }
+      .whatsapp-btn:hover {
+        background-color: #128c7e;
+        transform: translateY(-2px);
+      }
+
+      /* Media query para móviles */
+      @media (max-width: 768px) {
+        .banner {
+          min-height: 80vh;
+        }
+      }
+    </style>
 
     <!-- Tarjeta de Horarios -->
     <div class="horarios-wrapper">
