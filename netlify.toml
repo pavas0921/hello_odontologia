@@ -1,0 +1,12 @@
+# netlify.toml
+[[redirects]]
+  from = "http://helloodontologia.com/*"
+  to = "https://www.helloodontologia.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://helloodontologia.com/*"
+  to = "https://www.helloodontologia.com/:splat"
+  status = 301
+  force = true
