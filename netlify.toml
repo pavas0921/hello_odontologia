@@ -1,16 +1,1 @@
-[[redirects]]
-  from = "http://helloodontologia.com/*"
-  to = "https://www.helloodontologia.com/:splat"
-  status = 301
-  force = true
 
-[[redirects]]
-  from = "https://helloodontologia.com/*"
-  to = "https://www.helloodontologia.com/:splat"
-  status = 301
-  force = true
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
